@@ -85,16 +85,18 @@ namespace CPE200Lab1
             isNumberPart = false;
         }
 
-        private void btnEqual_Click(object sender, EventArgs e)
+        rivate void btnEqual_Click(object sender, EventArgs e)
         {
-            string result = engine.Process(lblDisplay.Text);
-            if (result is "E")
+            if (isAfterEqual)
             {
-                lblDisplay.Text = "Error";
-            } else
-            {
-                lblDisplay.Text = result;
+                calculatewithengine(false);
             }
+            else
+            {
+                calculatewithengine(true);
+            }
+            isAfterEqual = true;
+            isFirst = true;
         }
 
         private void btnSign_Click(object sender, EventArgs e)
