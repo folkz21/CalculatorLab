@@ -13,6 +13,11 @@ namespace CPE200Lab1
 
 
 
+
+
+
+
+
         private bool isNumber(string str)
         {
             double retNum;
